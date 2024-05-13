@@ -5,8 +5,8 @@ import NavLinks from "./NavLinks";
 import { useEffect, useState } from "react";
 
 const themes = {
-  winter: "winter",
-  dracula: "dracula",
+  winter: "nord",
+  dracula: "dim",
 };
 
 const getThemeFromLocalStorage = () => {
