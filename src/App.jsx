@@ -14,6 +14,12 @@ import {
   SingleProduct,
 } from "./pages";
 
+import { ErrorElement } from "./components";
+
+// loaders
+import { loader as landingLoader } from "./pages/Landing";
+// actions
+
 // Create a browser router configuration
 const router = createBrowserRouter([
   {
@@ -30,6 +36,8 @@ const router = createBrowserRouter([
         index: true,
         // Render the Landing component for the root path
         element: <Landing />,
+        errorElement: <ErrorElement />,
+        loader: landingLoader,
       },
       {
         // Define a route for "/products"
