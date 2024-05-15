@@ -1,4 +1,5 @@
 import { Link, useLoaderData } from "react-router-dom"; // Importing Link and useLoaderData from react-router-dom
+import { formatPrice } from "../utils";
 
 const ProductsGrid = () => {
   const { products } = useLoaderData(); // Using useLoaderData to fetch the products data
@@ -9,6 +10,7 @@ const ProductsGrid = () => {
       {products.map((product) => {
         // Iterating over the products array
         const { title, price, image } = product.attributes; // Destructuring attributes of each product
+        const dollarsAmmount = formatPrice(price);
         return (
           <Link
             key={product.id}
@@ -27,7 +29,7 @@ const ProductsGrid = () => {
             <div className="card-body items-center text-center">
               <h2 className="card-title capitalize tracking-wider">{title}</h2>
               {/* Displaying the product title with capitalization and tracking-wide */}
-              <span className="text-secondary">{price}</span>
+              <span className="text-secondary">{dollarsAmmount}</span>
               {/* Displaying the product price with secondary text color */}
             </div>
           </Link>
