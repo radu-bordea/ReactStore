@@ -19,6 +19,7 @@ import { ErrorElement } from "./components";
 // loaders
 import { loader as landingLoader } from "./pages/Landing";
 import { loader as singleProductLoader } from "./pages/SingleProduct";
+import { loader as productsLoader } from "./pages/Products";
 // actions
 
 // Create a browser router configuration
@@ -45,6 +46,8 @@ const router = createBrowserRouter([
         path: "products",
         // Render the Products component for the "/products" path
         element: <Products />,
+        errorElement: <ErrorElement />,
+        loader: productsLoader,
       },
       {
         // Define a route for "/products/:id" where :id is a dynamic parameter
