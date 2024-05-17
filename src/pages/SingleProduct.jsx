@@ -45,7 +45,7 @@ const SingleProduct = () => {
         {/* PRODUCT INFO */}
         <div>
           <h1 className="capitalize text-3xl font-bold">{title}</h1>
-          <h4 className="text-xl text-neutral-content font-bold mt-2">
+          <h4 className="text-xl text-neutral-500 font-bold mt-2">
             {company}
           </h4>
           <p className="mt-3 text-xl">{dollarsAmount}</p>
