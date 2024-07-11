@@ -1,6 +1,11 @@
 import { FormInput, SubmitBtn } from "../components";
 import { Form, Link } from "react-router-dom";
 
+export const action = (store) => async () => {
+  console.log(store);
+  return null;
+};
+
 const Login = () => {
   return (
     // Render a section for the login form, centered vertically and horizontally

@@ -22,6 +22,9 @@ import { loader as singleProductLoader } from "./pages/SingleProduct";
 import { loader as productsLoader } from "./pages/Products";
 // actions
 import { action as registerAction } from "./pages/Register";
+import { action as loginAction } from "./pages/Login";
+import {store} from "./store";
+
 
 // Create a browser router configuration
 const router = createBrowserRouter([
@@ -91,6 +94,7 @@ const router = createBrowserRouter([
     element: <Login />,
     // Render the Error component if there's an error on this path
     errorElement: <Error />,
+    action: loginAction(store),
   },
   {
     // Define a route for "/register"
