@@ -21,6 +21,7 @@ import { loader as landingLoader } from "./pages/Landing";
 import { loader as singleProductLoader } from "./pages/SingleProduct";
 import { loader as productsLoader } from "./pages/Products";
 // actions
+import { action as registerAction } from "./pages/Register";
 
 // Create a browser router configuration
 const router = createBrowserRouter([
@@ -98,6 +99,7 @@ const router = createBrowserRouter([
     element: <Register />,
     // Render the Error component if there's an error on this path
     errorElement: <Error />,
+    action: registerAction,
   },
 ]);
 
